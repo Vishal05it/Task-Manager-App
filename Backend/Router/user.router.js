@@ -65,7 +65,7 @@ userRouter.post("/login", async (req, res) => {
         res.cookie("taskAuthToken", taskAuthToken, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "strict",
+            sameSite: "none",
             path: "/",
             expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
         });
