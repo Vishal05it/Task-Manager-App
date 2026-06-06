@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cookieParser());
 connectToDB();
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://task-manager-app-beta-rosy.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }));
